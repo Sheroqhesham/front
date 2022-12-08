@@ -12,6 +12,33 @@ code {
     monospace;
 }
 
+.box{
+  height: 500px;
+  width: 500px;
+  background: lightgray;
+  margin-top: 150px;
+  margin-right: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+#box button{
+  background-color: green;
+}
+.boxtwo{
+  height: 500px;
+  width: 500px;
+  background: lightgrey;
+  margin-top: 150px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+}
+.parent{
+  display: flex;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

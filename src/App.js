@@ -8,6 +8,7 @@ import SigninPage from './pages/SigninPage';
 import SignupPage from './pages/SignupPage';
 import Layout from './UI/layout/Layout';
 import ProdutPage from './pages/ProdutPage';
+import Adminview from './pages/AdminView';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/products/add" element={<AddProductPage />} />
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/signin" element={<SigninPage />} />
+            <Route path="/admin" element={<Adminview/>} />
           </Routes>
         </Layout>
       </BrowserRouter>

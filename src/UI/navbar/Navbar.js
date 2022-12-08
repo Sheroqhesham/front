@@ -11,6 +11,7 @@ const Navbar = () => {
         <NavItem to="/">Home</NavItem>
         <NavItem to="/properties/all">Products</NavItem>
         <NavItem to="/products/add">Add Product</NavItem>
+        <NavItem to="/admin">Admin</NavItem>
         {!authContext.token && <NavItem to="/signin">Sign In</NavItem>}
         {!authContext.token && <NavItem to="/signup">Sign Up</NavItem>}
       </ul>
