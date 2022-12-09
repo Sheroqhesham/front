@@ -45,6 +45,11 @@ code {
 .test{
   font-size: large;
 }
+
+
+.test2{
+  font-size: large;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
