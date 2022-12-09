@@ -1,4 +1,0 @@
-#Sama
-.class{
-  background-color: #4CAF50;
-}

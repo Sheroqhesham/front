@@ -1,0 +1,4 @@
+#sherouq
+.sh{
+  font: optional;
+}
