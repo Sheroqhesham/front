@@ -64,6 +64,10 @@ code {
 .test2{
   font-size: large;
 }
+
+.sama{
+  forced-color-adjust: auto;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
