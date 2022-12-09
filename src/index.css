@@ -38,7 +38,9 @@ code {
   display: flex;
 }
 
-
+.hello{
+  display: block;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
