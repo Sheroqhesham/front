@@ -37,6 +37,14 @@ code {
 .parent{
   display: flex;
 }
+
+.hello{
+  display: block;
+}
+
+.test{
+  font-size: large;
+}
 .buttonseif {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -62,6 +70,9 @@ code {
   display: block;
 }
 
+.test2{
+  font-size: large;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
