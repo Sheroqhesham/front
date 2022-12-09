@@ -36,13 +36,6 @@ code {
   display: flex;
 }
 
-.hello{
-  display: block;
-}
-
-.test{
-  font-size: large;
-}
 .buttonseif {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -56,20 +49,11 @@ code {
   transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
-.alo{
-  height: 500px;
+
+.buttonseif:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.hello{
-  display: block;
-
-.test2{
-  font-size: large;
-}
-
-.sama{
-  forced-color-adjust: auto;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
