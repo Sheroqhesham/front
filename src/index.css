@@ -56,7 +56,9 @@ code {
 }
 
 #Sama
-
+.sama{
+  font-size: large;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
