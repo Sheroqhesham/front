@@ -9,24 +9,18 @@ const ProductSummary = (props) => {
   const navigate = useNavigate();
 
   const btnOnClickHandler = () => {
-    navigate(`/products/${props.product._id}`);
+    navigate(`/properties/${props.product._id}`);
   };
 
   return (
-    <Card>
       <CardBody>
-        <h3 className="font-bold">{props.product.Name}</h3>
+        <h3 class = "Center">{props.product.Name}</h3>
+        <h3>{props.product.Description}</h3>
         <h5>{props.product.Price} EGP</h5>
+        <a href="/ViewUsersPage">
+            <button class="buttonsama"><h2>Rent</h2></button>
+      </a>
       </CardBody>
-      <CardActions>
-        <button
-          className="bg-white py-3 px-10 font-bold rounded-xl"
-          onClick={btnOnClickHandler}
-        >
-          View
-        </button>
-      </CardActions>
-    </Card>
   );
 };
 
