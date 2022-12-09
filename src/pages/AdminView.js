@@ -4,11 +4,11 @@ import React from 'react';
 
 const Adminview = () => {
   return (
-  <div class="parent">
+  <div class="parentseif">
     <div class="box">
         <h1>Users</h1>
         <div>
-          <a href="/ViewUsersPage">
+          <a href="/viewusers">
             <button class="buttonseif"><h2>View</h2></button>
           </a>
         </div>
@@ -16,7 +16,7 @@ const Adminview = () => {
     <div class="boxtwo">
         <h1>Properties</h1>
         <div>
-          <a href="/ViewPropertiesPage">
+          <a href="/viewproperties">
             <button class="buttonseif"><h2>View</h2></button>
           </a>
         </div>

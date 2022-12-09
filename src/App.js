@@ -9,6 +9,9 @@ import SignupPage from './pages/SignupPage';
 import Layout from './UI/layout/Layout';
 import ProdutPage from './pages/ProdutPage';
 import Adminview from './pages/AdminView';
+import ViewUsersPage from './pages/ViewUsersPage';
+import PendingPage from './pages/ViewPropertiesPage';
+
 
 const App = () => {
   return (
@@ -23,6 +26,8 @@ const App = () => {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/signin" element={<SigninPage />} />
             <Route path="/admin" element={<Adminview/>} />
+            <Route path="/viewusers" element={<ViewUsersPage/>}/>
+            <Route path="/viewproperties" element={<PendingPage/>}/>
           </Routes>
         </Layout>
       </BrowserRouter>
