@@ -41,6 +41,10 @@ code {
 .hello{
   display: block;
 }
+
+.test{
+  font-size: large;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
