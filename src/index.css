@@ -56,12 +56,7 @@ code {
 }
 
 #Sama
-.bla{
-  font: optional;
-}
-.bla1{
-  font: optional;
-}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
