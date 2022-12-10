@@ -12,6 +12,8 @@ import Adminview from './pages/AdminView';
 import ViewUsersPage from './pages/ViewUsersPage';
 import PendingPage from './pages/ViewPropertiesPage';
 import ViewPropertiesUpdatedApprroved from './pages/ViewPropertiesUpdatedApproved';
+import ViewPropertiesUpdatedDeleted from './pages/ViewPropertiesUpdatedDeleted';
+
 
 
 const App = () => {
@@ -30,6 +32,7 @@ const App = () => {
             <Route path="/viewusers" element={<ViewUsersPage/>}/>
             <Route path="/viewproperties" element={<PendingPage/>}/>
             <Route path="/Viewpropertiesup/:id" element={<ViewPropertiesUpdatedApprroved/>}/>
+            <Route path="/Viewpropertiesdel/:id" element={<ViewPropertiesUpdatedDeleted/>}/>
           </Routes>
         </Layout>
       </BrowserRouter>
