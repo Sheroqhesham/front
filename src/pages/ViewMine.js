@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import ProductsList from '../components/products/ProductsList';
+import MyPropSummary from '../components/products/ProductsListcopy';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
-//const requestId ="6395038cd36b1fe03d95fb72";
+
 const ViewMine = () => {
   // let's define a state for products
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
   const params = useParams();
-  const requestId = params.id;
+  const userId = params.userId;
   // let's define a state for loading
   const [isLoading, setIsLoading] = useState(true);
 
@@ -20,7 +20,7 @@ const ViewMine = () => {
     const fetchProducts = async () => {
       try {
         // send an HTTP GET request to the get products route we defined in our Express REST API
-        const response = await fetch(`http://localhost:3000/properties/all/` + requestId,{
+        const response = await fetch(`http://localhost:3000/properties/all/` + userId,{
             method: 'GET',
             signal: fetchSignal
         });
@@ -34,7 +34,7 @@ const ViewMine = () => {
         }
 
         // we now need to set our component state to the products we fetched
-        setProducts(data.properties);
+        setProducts(data.mine);
         // after we set the products' state, let's set the loading state to false
         setIsLoading(false);
       } catch (err) {
@@ -55,7 +55,7 @@ const ViewMine = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <ProductsList products={products} />
+      <MyPropSummary products={products} />
     </div>
   );
 };

@@ -1,10 +1,18 @@
 import { useEffect, useState } from 'react';
-import ProductsList from '../components/products/ProductsList';
+import PendingList from '../components/products/PendingList';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-const HomePage = () => {
+const DeleteMyProp = (props) => {
+  // let's define a state for products
   const [products, setProducts] = useState([]);
+
   // let's define a state for loading
   const [isLoading, setIsLoading] = useState(true);
+
+  const navigate = useNavigate();
+  const params = useParams();
+  const id = params.id;
 
   useEffect(() => {
     const fetchAbortController = new AbortController();
@@ -13,26 +21,30 @@ const HomePage = () => {
     const fetchProducts = async () => {
       try {
         // send an HTTP GET request to the get products route we defined in our Express REST API
-        const response = await fetch('http://localhost:3000/properties/all', {
-          signal: fetchSignal
+        const response = await fetch (`http://localhost:3000/properties/` + id,{
+        method: 'DELETE',
+        signal: fetchSignal
         });
         // parse the response content to JSON and store it into data variable
         const data = await response.json();
 
         // If there is an HTTP error (the response is NOT ok), throw the error message we get from the REST API.
         if (!response.ok) {
-          // remember, in our REST API we return an error message in our response that has the key 'error'.
           throw Error(data.error);
+        }else{
+          navigate(`/`);
         }
+        
 
         // we now need to set our component state to the products we fetched
-        setProducts(data.properties);
+        setProducts(data.del);
         // after we set the products' state, let's set the loading state to false
         setIsLoading(false);
       } catch (err) {
         console.log(err.message);
       }
     };
+
     fetchProducts();
 
     return () => {
@@ -43,14 +55,12 @@ const HomePage = () => {
   if (isLoading) {
     return <p>Please wait while we are loading data...</p>;
   }
+
   return (
-    <div>
-      <a href="/viewmine/6394a307a8bafc7e2a372633">
-            <button class="buttonsama1"><h2>My properties</h2></button>
-      </a>
-      <ProductsList products={products} />
+    <div className="flex flex-col items-center justify-center">
+      {/* <PendingList products={products}/> */}
     </div>
   );
 };
 
-export default HomePage;
+export default DeleteMyProp;

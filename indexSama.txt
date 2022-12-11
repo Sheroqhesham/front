@@ -1,14 +1,108 @@
+/*Seif*/
+
+.buttonseif {
+  border-radius: 10px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 380px;
+  transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.buttonseif:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.containerseif{
+  border-radius: 10px;
+  width: 500px;
+  height: 170px;
+  background-color: rgb(176, 205, 231);
+  box-shadow: 10px 12px 5px 0 rgba(0,0,0,0.24);
+  text-align: center;
+  padding: 20px;
+  display: block;
+}
+
+.pcontainerseif{
+  border-radius: 10px;
+  width: 500px;
+  height: 200px;
+  background-color: rgb(176, 205, 231);;
+  box-shadow: 10px 12px 5px 0 rgba(0,0,0,0.24);
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  display: block;
+}
+
+.bigcontainerseif{
+  display: inline-block;
+}
+
+
+.banbuttonseif{
+  border-radius: 10px;
+  background-color: red;
+  align-self: center;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-top: 40px ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  justify-self: left;
+}
+
+.banbuttonseif:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.approvebuttonseif{
+  border-radius: 10px;
+  background-color: green;
+  align-self: center;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-top: 40px ;
+  margin-right: 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  justify-self: left;
+}
+
+.approvebuttonseif:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 /*Sama*/
 .card {
   box-shadow: 0 4px 8px 0 rgb(12 74 110);
   transition: 0.3s;
-  width:1080px;
-  padding: 30px;
+  width:800px;
+  height: 300px;
+  padding: 0px;
   padding-left: 100px;
   margin-left: 50px;
   margin-right: 10px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: -70px;
+  margin-bottom: 80px;
   float:left;
 }
 
@@ -16,8 +110,28 @@
   box-shadow: 0 8px 16px 0 rgb(15, 10, 33);
 }
 
+.cardsama{
+  box-shadow: 0 4px 8px 0 rgb(12 74 110);
+  transition: 0.3s;
+  width:750px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  padding-top: -20px;
+  margin-left: 50px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  float:left;
+}
+
+img {
+  float: rigt;
+  margin-left: 400px;
+  margin-top: -75px;
+}
+
 .containercard {
-  padding: 30px 50px;
+  padding: -40px -40px;
   margin-left: 0px;
   margin-right: auto;
   left:0px;
@@ -37,15 +151,48 @@
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-top: -60px;
+  margin-bottom: 50px;
   margin-right: 0px;
   margin-left: 10px;
+  position:absolute;
+  transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.buttonsama1 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 960px;
+  transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.buttonsama2{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: -60px;
+  margin-bottom: 50px;
+  margin-right: 0px;
+  margin-left: 150px;
+  position:absolute;
   transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
 .Center{
-  text-align: center;
+  margin-top: 50px;
+  text-align: left;
   font-weight: bold;
 }
 
@@ -53,3 +200,7 @@
   text-align: center;
   font-weight: bold;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
