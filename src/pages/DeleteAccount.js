@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Pending from '../components/products/Pending';
 import { useParams } from 'react-router-dom';
+import React from 'react';
+
+
 
 const DeleteAccount = (account) => {
   const [account, setaccount] = useState([]);
@@ -13,7 +17,7 @@ const DeleteAccount = (account) => {
     const fetchAbortController = new AbortController();
     const fetchSignal = fetchAbortController.signal;
 
-    const fetchProducts = async () => {
+    const fetchaccount= async () => {
       console.log(requestId);
       try {
         const response = await fetch (`http://localhost:3000/account/userDelete/` + requestId,{
@@ -35,7 +39,9 @@ const DeleteAccount = (account) => {
       }
     };
 
-    fetchProducts();
+
+
+    fetchaccount();
 
     return () => {
       fetchAbortController.abort();
