@@ -16,6 +16,9 @@ import ViewPropertiesUpdatedDeleted from './pages/ViewPropertiesUpdatedDeleted';
 import ViewUsersUpdatedDeleted from './pages/ViewUsersUpdatedDeleted';
 import ViewMine from './pages/ViewMine';
 import DeleteMyProp from './pages/DeleteMyProp';
+import ViewHistory from './pages/ViewHistory';
+import DeleteAccount from './pages/DeleteAccount';
+
 
 const App = () => {
   return (
@@ -37,6 +40,9 @@ const App = () => {
             <Route path="/Viewpropertiesdel/:id" element={<ViewPropertiesUpdatedDeleted/>}/>
             <Route path="/Viewusersdel/:id" element={<ViewUsersUpdatedDeleted/>}/>
             <Route path="/Deleted/:id" element= {<DeleteMyProp/>} />
+            <Route path="/ViewHistory/:userId" element={<ViewHistory/>}/> 
+            <Route path="/DeleteAccount/:id" element={<DeleteAccount/>}/> 
+
           </Routes>
         </Layout>
       </BrowserRouter>
