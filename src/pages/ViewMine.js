@@ -1,9 +1,15 @@
 import { useEffect, useState } from 'react';
 import ProductsList from '../components/products/ProductsList';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-const HomePage = () => {
+//const requestId ="6395038cd36b1fe03d95fb72";
+const ViewMine = () => {
+  // let's define a state for products
   const [products, setProducts] = useState([]);
-
+  const navigate = useNavigate();
+  const params = useParams();
+  const requestId = params.id;
   // let's define a state for loading
   const [isLoading, setIsLoading] = useState(true);
 
@@ -14,8 +20,9 @@ const HomePage = () => {
     const fetchProducts = async () => {
       try {
         // send an HTTP GET request to the get products route we defined in our Express REST API
-        const response = await fetch('http://localhost:3000/properties/all', {
-          signal: fetchSignal
+        const response = await fetch(`http://localhost:3000/properties/all/` + requestId,{
+            method: 'GET',
+            signal: fetchSignal
         });
         // parse the response content to JSON and store it into data variable
         const data = await response.json();
@@ -34,6 +41,7 @@ const HomePage = () => {
         console.log(err.message);
       }
     };
+
     fetchProducts();
 
     return () => {
@@ -44,14 +52,11 @@ const HomePage = () => {
   if (isLoading) {
     return <p>Please wait while we are loading data...</p>;
   }
+
   return (
-    <div>
-      <a href="/viewmine/6395038cd36b1fe03d95fb72">
-            <button class="buttonsama1"><h2>My properties</h2></button>
-      </a>
+    <div className="flex flex-col items-center justify-center">
       <ProductsList products={products} />
     </div>
   );
 };
-
-export default HomePage;
+export default ViewMine;

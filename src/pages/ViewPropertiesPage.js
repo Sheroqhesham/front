@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PendingList from '../components/products/PendingList';
 
-const PendingPage = () => {
+  const PendingPage = () => {
   // let's define a state for products
   const [products, setProducts] = useState([]);
 

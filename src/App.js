@@ -14,8 +14,7 @@ import PendingPage from './pages/ViewPropertiesPage';
 import ViewPropertiesUpdatedApprroved from './pages/ViewPropertiesUpdatedApproved';
 import ViewPropertiesUpdatedDeleted from './pages/ViewPropertiesUpdatedDeleted';
 import ViewUsersUpdatedDeleted from './pages/ViewUsersUpdatedDeleted';
-
-
+import ViewMine from './pages/ViewMine';
 
 const App = () => {
   return (
@@ -31,10 +30,12 @@ const App = () => {
             <Route path="/signin" element={<SigninPage />} />
             <Route path="/admin" element={<Adminview/>} />
             <Route path="/viewusers" element={<ViewUsersPage/>}/>
+            <Route path="/viewmine/:id" element={<ViewMine/>}/> 
             <Route path="/viewproperties" element={<PendingPage/>}/>
             <Route path="/Viewpropertiesup/:id" element={<ViewPropertiesUpdatedApprroved/>}/>
             <Route path="/Viewpropertiesdel/:id" element={<ViewPropertiesUpdatedDeleted/>}/>
             <Route path="/Viewusersdel/:id" element={<ViewUsersUpdatedDeleted/>}/>
+            
           </Routes>
         </Layout>
       </BrowserRouter>
